@@ -1,0 +1,262 @@
+/* reset default value */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* this is to get the default font size 10px, so that working with REM is easier rather than 16px default font size || math >> (10 / 16) * 100  */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(65, 64, 64);
+    padding: 1rem;
+}
+
+.container {
+    font-size: 1.6rem;
+    margin: auto;
+    max-width: 110rem;
+    min-height: 100vh;
+    background-color: rgb(216, 226, 245);
+}
+
+/* HEADER */
+
+.jumbotron {
+    height: 70vh;
+    background-color: #202c52;
+    color: #fff;
+}
+
+.text-box {
+    /* background-color: greenyellow; */
+    position: relative;
+    text-align: center;
+    width: 50%;
+    top: 10rem;
+    margin: auto;
+}
+
+.text-box .title {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+}
+
+.text-box .title-description {
+    color: rgb(163, 154, 154);
+}
+
+/* CARDS */
+
+.card-container {
+    margin-top: -15rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    width: 25rem;
+    border-radius: .3rem;
+    box-shadow: 0 8px 16px -6px rgb(43, 38, 38);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: all .5s;
+}
+
+.card:not(:last-child) {
+    margin-right: 3rem;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(71, 75, 77, .8);
+    color: #fff;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay-icon {
+    width: 8rem;
+}
+
+.card-header {
+    background-color: #333;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header span {
+    font-size: 1rem;
+}
+
+.card-content {
+    padding: 0 1.6rem;
+}
+
+.card-price {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.card-price .sign {
+    vertical-align: top;
+}
+
+.card-price .number {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.card-price .desc {
+    vertical-align: baseline;
+}
+
+.divider {
+    border-bottom: .5px solid rgb(138, 135, 135);
+    margin: 3rem 0;
+}
+
+.card-benefit {
+    margin-bottom: 3rem;
+}
+
+
+/* FOOTER */
+
+.footer {
+    /* background-color: orange; */
+    width: 75%;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+.footer .footer-title {
+    margin: 10rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+
+}
+
+.footer .footer-box__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-box {
+    width: 48%;
+}
+
+.footer-question {
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.footer-answer {
+    color: rgb(124, 120, 120);
+}
+
+.card-action {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.btn {
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background-color: rgb(151, 43, 253);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
+
+/* MODAL */
+
+/* modal (background) */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* modal content/box */
+  .modal-content {
+    min-height: 10rem;
+    text-align: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+  /* close Button */
+  .close {
+      margin-top: 2rem;
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: rgb(151, 43, 253);
+    font-weight: bold;
+    transition: all .5s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    background-color: rgb(151, 43, 253);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+      flex-direction: column;
+    }
+
+    .card:not(:last-child) {
+        margin-right: 0;
+    }
+  }
