@@ -27,13 +27,13 @@ body {
 
 /* HEADER */
 
-.jumbotron {
+.header {
     height: 70vh;
     background-color: #202c52;
     color: #fff;
 }
 
-.text-box {
+.header__text-box {
     /* background-color: greenyellow; */
     position: relative;
     text-align: center;
@@ -42,17 +42,17 @@ body {
     margin: auto;
 }
 
-.text-box .title {
+.header__title {
     font-size: 4.5rem;
     font-weight: 500;
     margin-bottom: 1.8rem;
 }
 
-.text-box .title-description {
-    color: rgb(163, 154, 154);
+.header__title-desc {
+    opacity: .6;
 }
 
-/* CARDS */
+/* CARD */
 
 .card-container {
     margin-top: -15rem;
@@ -82,7 +82,7 @@ body {
     transform: scale(1.1);
 }
 
-.overlay {
+.card__overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -98,18 +98,18 @@ body {
     color: #fff;
 }
 
-.overlay-text {
+.card__overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.overlay-icon {
+.card__overlay-icon {
     width: 8rem;
 }
 
-.card-header {
+.card__header {
     background-color: #333;
     text-transform: uppercase;
     color: #fff;
@@ -119,80 +119,42 @@ body {
     align-items: center;
 }
 
-.card-header span {
+.card__desc {
     font-size: 1rem;
 }
 
-.card-content {
+.card__content {
     padding: 0 1.6rem;
 }
 
-.card-price {
+.card__price {
     text-align: center;
     margin-top: 3rem;
 }
 
-.card-price .sign {
+.card__price-sign {
     vertical-align: top;
 }
 
-.card-price .number {
+.card__price-number {
     font-size: 5rem;
     font-weight: 100;
 }
 
-.card-price .desc {
+.card__price-desc {
     vertical-align: baseline;
 }
 
-.divider {
+.card__divider {
     border-bottom: .5px solid rgb(138, 135, 135);
     margin: 3rem 0;
 }
 
-.card-benefit {
+.card__benefit {
     margin-bottom: 3rem;
 }
 
-
-/* FOOTER */
-
-.footer {
-    /* background-color: orange; */
-    width: 75%;
-    margin: auto;
-    padding-bottom: 3rem;
-}
-
-.footer .footer-title {
-    margin: 10rem 0;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 100;
-
-}
-
-.footer .footer-box__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.footer-box {
-    width: 48%;
-}
-
-.footer-question {
-    margin-bottom: 1rem;
-    color: inherit;
-}
-
-.footer-answer {
-    color: rgb(124, 120, 120);
-}
-
-.card-action {
+.card__action {
     text-align: center;
     margin: 1rem 0;
 }
@@ -205,6 +167,43 @@ body {
     cursor: pointer;
     margin-bottom: 2rem;
     border-radius: .3rem;
+}
+
+/* FOOTER */
+
+.footer {
+    /* background-color: orange; */
+    width: 75%;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+.footer__title {
+    margin: 10rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+
+}
+
+.footer__text-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__text-box {
+    width: 48%;
+}
+
+.footer__question {
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.footer__answer {
+    opacity: .7;
 }
 
 /* MODAL */
@@ -224,7 +223,7 @@ body {
 }
 
 /* modal content/box */
-  .modal-content {
+  .modal__content {
     min-height: 10rem;
     text-align: center;
     background-color: #fefefe;
@@ -234,7 +233,7 @@ body {
   }
 
   /* close Button */
-  .close {
+  .modal__button-close {
       margin-top: 2rem;
     font-size: 1.8rem;
     background-color: transparent;
@@ -243,8 +242,8 @@ body {
     transition: all .5s;
   }
   
-  .close:hover,
-  .close:focus {
+  .modal__button-close:hover,
+  .modal__button-close:focus {
     background-color: rgb(151, 43, 253);
     color: #fff;
     text-decoration: none;
